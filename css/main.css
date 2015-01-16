@@ -22,10 +22,58 @@ html {
   box-sizing: inherit;
 }
 
+body {
+    margin: 2em 3em;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttons {
+    position: relative;
+    top: 2em;
+    margin-left: 1.5em;
+}
+
+.button-1 {
+    background: green;
+    border: 1px green;
+    border-radius: 200px;
+    padding: 50px 25px;
+    margin-right: 1em;
+}
+
+.button-2 {
+    background: red;
+    border: 1px red;
+    border-radius: 200px;
+    padding: 50px 20px;
+}
+
+.btn:link,
+.btn:visited {
+    color: white;
+    transition: background-color 1000ms ease-in;
+    transition: color 1000ms ease-in;
+}
+
+.btn:hover,
+.btn:focus,
+.btn:active {
+    color:black;
+    background-color: white;  
+}
+
+        
+
 .clock-face {
   height: 300px;
   width: 300px;
   background: transparent url(../images/clock-face.svg);
+  position: relative;
+  top:100px;
 }
 
 .hand {
@@ -37,7 +85,7 @@ html {
 
 .hand-minute {
     position: absolute;
-    left: 151px;
+    left: 140px;
 }
 
 .center {
