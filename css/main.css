@@ -23,7 +23,7 @@ html {
 }
 
 body {
-    margin: 2em 3em;
+    text-align: center;
 }
 
 a {
@@ -38,18 +38,23 @@ a {
 }
 
 .button-1 {
-    background: green;
-    border: 1px green;
-    border-radius: 200px;
-    padding: 50px 25px;
-    margin-right: 1em;
+    background-color: green;
+    border-radius: 50%;
+    width: 6em;
+    line-height: 6em;
+    display: inline-block;
+    margin: 0 1em;
+    transition: all .4s linear;
 }
 
 .button-2 {
-    background: red;
-    border: 1px red;
-    border-radius: 200px;
-    padding: 50px 20px;
+    background-color: red;
+    border-radius: 50%;
+    width: 6em;
+    line-height: 6em;
+    display: inline-block;
+    margin: 0 1em;
+    transition: all .4s linear;
 }
 
 .btn:link,
@@ -69,41 +74,34 @@ a {
 .clock-face {
   height: 300px;
   width: 300px;
-  background: transparent url(../images/clock-face.svg);
+  background: transparent url(../images/clock-face.svg)repeat left center;
+  background-repeat: no-repeat;
   position: relative;
   top:100px;
-  transition: transform 1000ms linear;
+  margin: 0 auto;
 }
 
-.clock-face:target,
-.hand-hour:target{
+.clock-face:target .hand-hour{
     transform: rotate(360deg);
 }
 
-.clock-face:target,
-.hand-minute{
+.clock-face:target .hand-minute{
     transform: rotate(4320deg);
 }
 
 .hand {
   width: 14px;
-    position: relative;
-    left: 143px;
-    top: 80px;
+  position: absolute;
+  left: calc(50% - 7px);
+  bottom: 50%;
+  transition: all 5s linear;
+  transform-origin: bottom center;
 }
 
-.hand-minute {
-    position: absolute;
-    left: 143px;
-}
-
-.hand-hour {
-    top: 80px;
-}
 
 .center {
   width: 28px;
-  position: relative;
-  left: 117px; 
-  top: 110px;
+  position: absolute;
+  top: calc(50% - 14px);
+  left: calc(50% - 14px);
 }
