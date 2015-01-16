@@ -55,8 +55,7 @@ a {
 .btn:link,
 .btn:visited {
     color: white;
-    transition: background-color 1000ms ease-in;
-    transition: color 1000ms ease-in;
+    transition: background-color 1000ms linear;
 }
 
 .btn:hover,
@@ -65,8 +64,7 @@ a {
     color:black;
     background-color: white;  
 }
-
-        
+     
 
 .clock-face {
   height: 300px;
@@ -74,6 +72,17 @@ a {
   background: transparent url(../images/clock-face.svg);
   position: relative;
   top:100px;
+  transition: transform 1000ms linear;
+}
+
+.clock-face:target,
+.hand-hour:target{
+    transform: rotate(360deg);
+}
+
+.clock-face:target,
+.hand-minute{
+    transform: rotate(4320deg);
 }
 
 .hand {
@@ -85,7 +94,11 @@ a {
 
 .hand-minute {
     position: absolute;
-    left: 140px;
+    left: 143px;
+}
+
+.hand-hour {
+    top: 80px;
 }
 
 .center {
